@@ -1,10 +1,12 @@
 import { Box, Card, CardContent, Divider, Typography } from "@mui/material";
 import React from "react";
+import styled from "styled-components";
+import { StyledBox } from "./styled";
 
 const AboutPage = () => {
   return (
-    <Box component="main" sx={{ p: 10, pt: 12 }}>
-      <Card sx={{pt: 10, pb: 10, pr: 3, pl: 3}}>
+    <StyledBox component="main">
+      <StyledCard>
         <CardContent>
           <Typography variant="h4" component="div">
             Kazem Abousetta
@@ -18,9 +20,21 @@ const AboutPage = () => {
             currently looking for a position as a software developer.
           </Typography>
         </CardContent>
-      </Card>
-    </Box>
+      </StyledCard>
+    </StyledBox>
   );
 };
+
+const StyledCard = styled(Card)`
+  padding: 100px;
+  @media (max-width: 768px)
+  {
+    padding:30px;
+  }
+  @media (max-width: 468px)
+  {
+    padding: 10px;
+  }
+`
 
 export default AboutPage;

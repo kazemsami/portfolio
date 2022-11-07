@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import styled from "styled-components";
 import {
   EmailImg,
   GithubImg,
@@ -15,6 +16,7 @@ import {
   LocationImg,
   PhoneImg,
 } from "../assets";
+import { StyledBox } from "./styled";
 
 const ContactPage = () => {
   const cards = [
@@ -28,14 +30,10 @@ const ContactPage = () => {
     },
   ];
   return (
-    <Box
+    <StyledBox
       component="main"
-      sx={{
-        p: 10,
-        pt: 12,
-      }}
     >
-      <Card sx={{ p: 5 }}>
+      <Card sx={{ p: 1 }}>
         <CardContent
           sx={{ gap: "10px", display: "flex", flexDirection: "column" }}
         >
@@ -82,7 +80,7 @@ const ContactPage = () => {
             {cards.map((item) => (
               <Grid key={item} item xs={4} sm={4} md={4} lg={4}>
                 <a href={item.link} target="_blank" rel="noreferrer">
-                  <Card sx={{ p: 3, background: "#284646" }}>
+                  <Card sx={{ p: 2, background: "#284646" }}>
                     <CardMedia
                       component="img"
                       height="140"
@@ -96,7 +94,7 @@ const ContactPage = () => {
           </Grid>
         </CardContent>
       </Card>
-    </Box>
+    </StyledBox>
   );
 };
 

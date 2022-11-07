@@ -11,6 +11,7 @@ import {
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { BusinessWebImg, CafeSystemImg, PersonalWebImg } from "../assets";
+import { StyledBox } from "./styled";
 
 const style = {
   position: "absolute",
@@ -54,16 +55,12 @@ const HomePage = () => {
     },
   ];
   return (
-    <Box
+    <StyledBox
       component="main"
-      sx={{
-        p: 10,
-        pt: 12,
-      }}
     >
       <Grid
         container
-        spacing={{ xs: 2, md: 3, lg: 4 }}
+        spacing={{ xs: 3, md: 4, lg: 5 }}
         columns={{ xs: 4, sm: 8, md: 12, lg: 16 }}
         alignItems="stretch"
       >
@@ -131,7 +128,7 @@ const HomePage = () => {
           </Grid>
         ))}
       </Grid>
-    </Box>
+    </StyledBox>
   );
 };
 
