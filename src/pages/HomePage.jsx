@@ -8,7 +8,6 @@ import {
   Modal,
   Typography,
 } from "@mui/material";
-import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { BusinessWebImg, CafeSystemImg, PersonalWebImg } from "../assets";
 import { StyledBox } from "./styled";

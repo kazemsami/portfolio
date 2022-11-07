@@ -6,9 +6,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { Box } from "@mui/system";
 import React from "react";
-import styled from "styled-components";
 import {
   EmailImg,
   GithubImg,
