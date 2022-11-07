@@ -4,7 +4,7 @@ import React from "react";
 const AboutPage = () => {
   return (
     <Box component="main" sx={{ p: 10, pt: 12 }}>
-      <Card sx={{p: 10}}>
+      <Card sx={{pt: 10, pb: 10, pr: 3, pl: 3}}>
         <CardContent>
           <Typography variant="h4" component="div">
             Kazem Abousetta
