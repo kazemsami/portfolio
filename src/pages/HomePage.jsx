@@ -82,6 +82,7 @@ const HomePage = () => {
                 display: "flex",
                 justifyContent: "space-between",
                 flexDirection: "column",
+                p: 1,
               }}
             >
               <CardMedia
