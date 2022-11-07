@@ -26,3 +26,9 @@ jobs:
         cache: 'npm'
     - run: npm i
     - run: npm run build
+    - run: cd build
+    - run: git init
+    - run: git add .
+    - run: git commit -m "Deploying"
+    - run: git remote add origin https://github.com/kazemsami/portfolio.git
+    - run: git push -u origin deploy
