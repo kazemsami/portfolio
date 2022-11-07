@@ -1,0 +1,1 @@
+export { default as CafeSystemImg } from "./CafeSystem-1.jpg"
