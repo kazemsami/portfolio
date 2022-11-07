@@ -1,1 +1,8 @@
 export { default as CafeSystemImg } from "./CafeSystem-1.jpg"
+export { default as GithubImg } from "./GitHub-Logo.png"
+export { default as LinkedInImg } from "./LinkedIn_logo.png"
+export { default as BusinessWebImg } from "./Business-website.png"
+export { default as PersonalWebImg } from "./Personal-website.png"
+export { default as LocationImg } from "./Location-img.png"
+export { default as PhoneImg } from "./Phone-img.png"
+export { default as EmailImg } from "./Email-img.png"
