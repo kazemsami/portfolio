@@ -72,7 +72,7 @@ const ContactPage = () => {
           <Divider sx={{ m: 2, background: "gray" }} />
           <Grid
             container
-            spacing={{ xs: 2, md: 3, lg: 4 }}
+            spacing={{ xs: 3, md: 4, lg: 5 }}
             columns={{ xs: 4, sm: 8, md: 12, lg: 16 }}
           >
             {cards.map((item) => (
@@ -84,6 +84,7 @@ const ContactPage = () => {
                       height="140"
                       image={item.img}
                       alt={item.link}
+                      sx={{objectFit: "contain"}}
                     />
                   </Card>
                 </a>
