@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import {
+  AnephityImg,
   BusinessWebImg,
   CafeSystemImg,
   Cub3dImg,
@@ -19,7 +20,7 @@ import {
 } from "../assets";
 import { StyledBox } from "./styled";
 import styled from "styled-components";
-import { IoCloseCircleOutline } from "react-icons/io5"
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 const HomePage = () => {
   const [open, setOpen] = useState(false);
@@ -51,6 +52,13 @@ const HomePage = () => {
       title: "Business web app",
       link: "https://jp-kalamatkat.web.app/",
       evidence: EvidenceImg,
+    },
+    {
+      description:
+        "A website with firebase as backend and HTML, CSS and Javascript as backend. You can post random images and others can like and comment on them.",
+      img: AnephityImg,
+      title: "Anephity web app",
+      link: "https://anephity.web.app/",
     },
     {
       description:
@@ -156,8 +164,12 @@ const HomePage = () => {
         aria-describedby="modal-modal-description"
       >
         <StyledCard>
-
-		<StyledButton onClick={handleClose}><IoCloseCircleOutline size={25} style={{color: "white"}}></IoCloseCircleOutline></StyledButton>
+          <StyledButton onClick={handleClose}>
+            <IoCloseCircleOutline
+              size={25}
+              style={{ color: "white" }}
+            ></IoCloseCircleOutline>
+          </StyledButton>
           {show !== EvidenceImg ? (
             <CardMedia component="video" src={show} autoPlay controls />
           ) : (
@@ -174,11 +186,11 @@ const HomePage = () => {
 };
 
 const StyledButton = styled.button`
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-	float: right;
-`
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  float: right;
+`;
 
 const StyledCard = styled(Card)`
   position: absolute;
