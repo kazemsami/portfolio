@@ -9,8 +9,8 @@ import {
 import React from "react";
 import {
   EmailImg,
-  GithubImg,
-  LinkedInImg,
+  GithubLogo,
+  LinkedInLogo,
   LocationImg,
   PhoneImg,
 } from "../assets";
@@ -20,11 +20,11 @@ const ContactPage = () => {
   const cards = [
     {
       link: "https://github.com/kazemsami",
-      img: GithubImg,
+      img: GithubLogo,
     },
     {
       link: "https://www.linkedin.com/in/kazem-abusitta/",
-      img: LinkedInImg,
+      img: LinkedInLogo,
     },
   ];
   return (
