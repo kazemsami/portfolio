@@ -1,7 +1,7 @@
 import { Card, CardContent, Divider, Typography } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
-import { StyledBox } from "./styled";
+import { StyledBox, StyledCard } from "./styled";
 
 const AboutPage = () => {
   return (
@@ -29,15 +29,5 @@ const AboutPage = () => {
     </StyledBox>
   );
 };
-
-const StyledCard = styled(Card)`
-  padding: 100px;
-  @media (max-width: 768px) {
-    padding: 30px;
-  }
-  @media (max-width: 468px) {
-    padding: 10px;
-  }
-`;
 
 export default AboutPage;

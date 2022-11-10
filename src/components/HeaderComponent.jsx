@@ -15,7 +15,7 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About me", "Contact"];
+const navItems = ["Home", "About me", "Learning Journey", "Goals", "Contact"];
 
 const HeaderComponent = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -41,6 +41,10 @@ const HeaderComponent = () => {
                     ? "about"
                     : item === "Contact"
                     ? "contact"
+                    : item === "Learning Journey"
+                    ? "learning_journey"
+                    : item === "Goals"
+                    ? "goals"
                     : "/"
                 }
               >
@@ -80,10 +84,14 @@ const HeaderComponent = () => {
                   style={{ textDecoration: "none", color: "white" }}
                   to={
                     item === "About me"
-                      ? "about"
-                      : item === "Contact"
-                      ? "contact"
-                      : "/"
+                    ? "about"
+                    : item === "Contact"
+                    ? "contact"
+                    : item === "Learning Journey"
+                    ? "learning_journey"
+                    : item === "Goals"
+                    ? "goals"
+                    : "/"
                   }
                 >
                   {item}

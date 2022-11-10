@@ -11,14 +11,22 @@ import {
 import React, { useState } from "react";
 import {
   AnephityImg,
+  AnephityURL,
   BusinessWebImg,
+  BusinessWebURL,
   CafeSystemImg,
+  CafeSystemURL,
+  CPP_MODULE_URL,
   Cub3dImg,
+  Cub3dURL,
   EvidenceImg,
+  Ft_containersURL,
   GithubImg,
+  MinishellURL,
   PersonalWebImg,
+  PersonalWebURL,
 } from "../assets";
-import { StyledBox } from "./styled";
+import { StyledBox, StyledButton, StyledCardModal } from "./styled";
 import styled from "styled-components";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
@@ -36,21 +44,21 @@ const HomePage = () => {
         "Internet Cafe Windows application that I developed using C/C++ Windows API interface.",
       img: CafeSystemImg,
       title: "Internet Cafe System",
-      link: "https://kazemsami.netlify.app/CafeSystem.mp4",
+      link: CafeSystemURL,
     },
     {
       description:
         "My first website that I built with just HTML, CSS and JavaScript that includes a script which locates a keyword in a book and displays a sentence containing that keyword.",
       img: PersonalWebImg,
       title: "Personal Website",
-      link: "https://kazemsami.netlify.app/",
+      link: PersonalWebURL,
     },
     {
       description:
         "Website that I have created for a business using firebase as a backend and HTML, CSS and JavaScript for the frontend.",
       img: BusinessWebImg,
       title: "Business web app",
-      link: "https://jp-kalamatkat.web.app/",
+      link: BusinessWebURL,
       evidence: EvidenceImg,
     },
     {
@@ -58,14 +66,14 @@ const HomePage = () => {
         "A website with firebase as backend and HTML, CSS and Javascript as backend. You can post random images and others can like and comment on them.",
       img: AnephityImg,
       title: "Anephity web app",
-      link: "https://anephity.web.app/",
+      link: AnephityURL,
     },
     {
       description:
         "ft_containers is a project where you have to build the STL containers in C++ such as map, vector and stack from scratch.",
       img: GithubImg,
       title: "ft_containers",
-      link: "https://github.com/kazemsami/ft_containers",
+      link: Ft_containersURL,
     },
 
     {
@@ -73,21 +81,21 @@ const HomePage = () => {
         "A 3D game programmed using the Ray casting method that calculates distance and generates only what needs to be seen.",
       img: Cub3dImg,
       title: "Cub3d",
-      link: "https://github.com/kazemsami/cub3d",
+      link: Cub3dURL,
     },
     {
       description:
         "This project aims to teach you the fundamentals of C++ and object-oriented-programming including polymorphism and inheritance.",
       img: GithubImg,
       title: "CPP Module",
-      link: "https://github.com/kazemsami/cpp-module",
+      link: CPP_MODULE_URL,
     },
     {
       description:
         "A bash replica built with C using system functions from libraries to execute commands in a child process, parse input and handle errors.",
       img: GithubImg,
       title: "Minishell",
-      link: "https://github.com/kazemsami/minishell",
+      link: MinishellURL,
     },
   ];
   return (
@@ -163,7 +171,7 @@ const HomePage = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <StyledCard>
+        <StyledCardModal>
           <StyledButton onClick={handleClose}>
             <IoCloseCircleOutline
               size={25}
@@ -179,31 +187,10 @@ const HomePage = () => {
               alt="Evidence for creating this business web application."
             />
           )}
-        </StyledCard>
+        </StyledCardModal>
       </Modal>
     </StyledBox>
   );
 };
-
-const StyledButton = styled.button`
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  float: right;
-`;
-
-const StyledCard = styled(Card)`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 70%;
-  transform: translate(-50%, -50%);
-  background-color: "background.paper";
-  border: 2px solid #000;
-  padding: 4px;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`;
 
 export default HomePage;
