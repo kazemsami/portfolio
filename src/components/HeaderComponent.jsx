@@ -33,24 +33,24 @@ const HeaderComponent = () => {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <Link
-                style={{ textDecoration: "none", color: "white" }}
-                to={
-                  item === "About me"
-                    ? "about"
-                    : item === "Contact"
-                    ? "contact"
-                    : item === "Learning Journey"
-                    ? "learning_journey"
-                    : item === "Goals"
-                    ? "goals"
-                    : "/"
-                }
-              >
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              to={
+                item === "About me"
+                  ? "about"
+                  : item === "Contact"
+                  ? "contact"
+                  : item === "Learning Journey"
+                  ? "learning_journey"
+                  : item === "Goals"
+                  ? "goals"
+                  : "/"
+              }
+            >
+              <ListItemButton sx={{ textAlign: "center" }}>
                 <ListItemText primary={item} />
-              </Link>
-            </ListItemButton>
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>
@@ -79,11 +79,10 @@ const HeaderComponent = () => {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
-                <Link
-                  style={{ textDecoration: "none", color: "white" }}
-                  to={
-                    item === "About me"
+              <Link key={item}
+                style={{ textDecoration: "none", color: "white" }}
+                to={
+                  item === "About me"
                     ? "about"
                     : item === "Contact"
                     ? "contact"
@@ -92,11 +91,12 @@ const HeaderComponent = () => {
                     : item === "Goals"
                     ? "goals"
                     : "/"
-                  }
-                >
+                }
+              >
+                <Button sx={{ color: "#fff" }}>
                   {item}
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>

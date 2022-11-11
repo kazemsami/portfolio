@@ -27,7 +27,6 @@ import {
   PersonalWebURL,
 } from "../assets";
 import { StyledBox, StyledButton, StyledCardModal } from "./styled";
-import styled from "styled-components";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
 const HomePage = () => {
@@ -143,6 +142,8 @@ const HomePage = () => {
                   href={
                     item.title !== "Internet Cafe System" ? item.link : null
                   }
+                  target="_blank"
+                  rel="noreferrer"
                   onClick={
                     item.title === "Internet Cafe System"
                       ? () => handleOpen(item.link)

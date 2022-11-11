@@ -27,7 +27,7 @@ const ShowCaseComponent = ({ title, link, image, evidence, handleOpen }) => {
       </CardContent>
       <CardActions>
         <Button
-          href={title !== "Internet Cafe System" ? link : null}
+          href={title !== "Internet Cafe System" ? link : ""}
           onClick={
             title === "Internet Cafe System" ? () => handleOpen(link) : null
           }

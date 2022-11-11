@@ -5,6 +5,7 @@ import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import LearningPage from "./pages/LearningPage";
+import GoalsPage from "./pages/GoalsPage";
 
 const darkTheme = createTheme({
   palette: {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/learning_journey" element={<LearningPage />} />
+        <Route path="/goals" element={<GoalsPage />} />
       </Routes>
     </ThemeProvider>
     </>

@@ -1,6 +1,5 @@
-import { Card, CardContent, Divider, Typography } from "@mui/material";
+import { CardContent, Divider, Typography } from "@mui/material";
 import React from "react";
-import styled from "styled-components";
 import { StyledBox, StyledCard } from "./styled";
 
 const AboutPage = () => {
