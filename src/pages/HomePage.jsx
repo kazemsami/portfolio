@@ -69,31 +69,31 @@ const HomePage = () => {
     },
     {
       description:
-        "ft_containers is a project where you have to build the STL containers in C++ such as map, vector and stack from scratch.",
+        "ft_containers is a school project where you have to build the STL containers in C++ such as map, vector and stack from scratch.",
       img: GithubImg,
-      title: "ft_containers",
+      title: "42's ft_containers",
       link: Ft_containersURL,
     },
 
     {
       description:
-        "A 3D game programmed using the Ray casting method that calculates distance and generates only what needs to be seen.",
+        "A school project where you have to build a 3D game using the Ray casting method that calculates distance and generates only what needs to be seen.",
       img: Cub3dImg,
-      title: "Cub3d",
+      title: "42's Cub3D",
       link: Cub3dURL,
     },
     {
       description:
-        "This project aims to teach you the fundamentals of C++ and object-oriented-programming including polymorphism and inheritance.",
+        "This school project aims to teach you the fundamentals of C++ and object-oriented-programming including polymorphism and inheritance.",
       img: GithubImg,
-      title: "CPP Module",
+      title: "42's CPP Modules",
       link: CPP_MODULE_URL,
     },
     {
       description:
-        "A bash replica built with C using system functions from libraries to execute commands in a child process, parse input and handle errors.",
+        "In this school project we have to replicate bash in the C language using system functions from libraries to execute commands in a child process, parse input and handle errors.",
       img: GithubImg,
-      title: "Minishell",
+      title: "42's Minishell",
       link: MinishellURL,
     },
   ];

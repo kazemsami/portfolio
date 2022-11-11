@@ -14,7 +14,7 @@ const AboutPage = () => {
           <Typography variant="body1">
             A passionate coder who is very enthusiastic and always looking
             forward to learning new technologies. <br />
-            <br /> I am currently a student at 42 Abu Dhabi coding school and I have been studying there since December 2020. I
+            <br /> I am currently a student at 42 Abu Dhabi coding school and I have been studying there since December 2021. I
             heard about programming at the age of 21 and that is when I started learning about different programming languages. My hobbies are gaming, music and
             coding.
             <br />

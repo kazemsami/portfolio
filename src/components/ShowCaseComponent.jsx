@@ -31,6 +31,8 @@ const ShowCaseComponent = ({ title, link, image, evidence, handleOpen }) => {
           onClick={
             title === "Internet Cafe System" ? () => handleOpen(link) : null
           }
+		  target="_blank"
+		  rel="noreferrer"
           size="small"
         >
           {title === "Internet Cafe System" ? "Watch" : "View"}
