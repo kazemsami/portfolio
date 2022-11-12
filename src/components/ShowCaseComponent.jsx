@@ -19,7 +19,7 @@ const ShowCaseComponent = ({ title, link, image, evidence, handleOpen }) => {
         background: "#284646",
       }}
     >
-      <CardMedia component="img" height="300" image={image} alt={""} />
+      <CardMedia component="img" height="300" image={image} alt={title} />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {title}
