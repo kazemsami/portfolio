@@ -18,7 +18,9 @@ import {
   Cub3dImg,
   Cub3dURL,
   EvidenceImg,
+  Ft_containersURL,
   GithubImg,
+  MinishellImg,
   MinishellURL,
   PersonalWebImg,
   PersonalWebURL,
@@ -58,13 +60,14 @@ const LearningPage = () => {
           <Typography variant="body1">
             My first actual project I worked on was an Internet Gaming Cafe
             Windows application with C/C++ Windows API as a freelancer. The most
-            challenging issue that I faced was setting up a database. I first
-            set it up using MySQL with C++ then went on to create my own
-            database using csv files. I store all the information in a local csv
-            file and fetch required information from there. Coding a functional
-            scrollbar from scratch was tough as well. All of this was a great
-            learning experience and assisted in improving my C/C++ skills and
-            understanding how Windows applications work behind the scenes.
+            complicated part was setting up a database. I first set it up by
+            using the MySQL library for C++ then decided that creating my own
+            database using CSV files was the way to go. I store all the
+            information in a local CSV file and fetch required information from
+            there. Coding a functional scrollbar from scratch was tough as well.
+            Needless to say, this was a great learning experience and assisted
+            in improving my C/C++ skills and understanding how Windows
+            applications work behind the scenes.
           </Typography>
           <ShowCaseComponent
             title="Internet Cafe System"
@@ -102,18 +105,20 @@ const LearningPage = () => {
           <ShowCaseComponent
             title="Business web app"
             image={BusinessWebImg}
-            handleOpen={null}
+            handleOpen={handleOpen}
             link={BusinessWebURL}
+            evidence={EvidenceImg}
           />
           <Divider sx={{ m: 2, background: "gray" }} />
           <Typography variant="h5">Social Media Web Application</Typography>
           <Typography variant="body1">
-            My next project was inspired by the Business web app because I had
-            to build a gallery and thought why not make it a social media kind
-            of web app where people can post images, comment and like. The logic
-            behind this idea was pretty complicated because it was my first time
-            ever working with Firebase. The website is not very responsive
-            albeit quite good considering it was my second website.
+            This project was inspired by the Business web application because I
+            had to build a gallery for it anyway and thought why not make it a
+            social media kind of website where people can post images, comment
+            and like. The logic behind this idea was pretty complicated because
+            it was my first time ever working with Firebase. The website is not
+            very responsive albeit quite good considering it was my second
+            website.
           </Typography>
           <ShowCaseComponent
             title="Anephity"
@@ -162,19 +167,19 @@ const LearningPage = () => {
             using them. So I tried that and voila it worked!
             <br />
             <br />
-            Another issue we both faced was relating builtin commands. She was
-            testing the exit command she wrote and asked me to take a look. So
-            then we both noticed that it does not work when passing a maximum
+            Another issue we both faced was related to built-in commands. She
+            was testing the exit command she wrote and asked me to take a look.
+            So then we both noticed that it does not work when passing a maximum
             unsigned long as an argument to exit. We solved it by using a quick
             hacky way where in our custom atoi we check that the size of the
-            string digits that we want to convert to integer are not more than
+            string digits that we want to convert to integer is not more than
             19. It was great working with a brilliant student like Anastasia, I
             learnt so much from her and would love to work with her again in the
             near future.
           </Typography>
           <ShowCaseComponent
             title="Minishell"
-            image={GithubImg}
+            image={MinishellImg}
             handleOpen={null}
             link={MinishellURL}
           />
@@ -195,11 +200,11 @@ const LearningPage = () => {
             <br />
             <br />
             Even though object-oriented programming is rather intricate, it gets
-            easier as I proceed through my learning journey. You will know what
-            I mean when we get to the last project.
+            simpler as I proceeded through my learning journey. You will know
+            what I mean when we get to the last project.
           </Typography>
           <ShowCaseComponent
-            title="CPP Module"
+            title="CPP Modules"
             image={GithubImg}
             handleOpen={null}
             link={CPP_MODULE_URL}
@@ -252,12 +257,65 @@ const LearningPage = () => {
             kind partner. I wouldn't have done it without him.
           </Typography>
           <ShowCaseComponent
-            title="42's Cub3D Project"
+            title="Cub3D"
             image={Cub3dImg}
             handleOpen={null}
             link={Cub3dURL}
           />
           <Divider sx={{ m: 2, background: "gray" }} />
+          <Typography variant="h5">42's ft_containers Project</Typography>
+          <Typography variant="body1">
+            ft_containers is a very long and complicated project where you have
+            to literally rebuild a couple of C++ STL containers from scratch.
+            Imagine having to recreate what some of the most talented coders
+            wrote. Good thing is you did not have to come up with everything
+            because most of it is documented on{" "}
+            <a
+              style={{ color: "white" }}
+              href="https://en.cppreference.com/w/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              cppreference
+            </a>{" "}
+            and{" "}
+            <a
+              style={{ color: "white" }}
+              href="https://cplusplus.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              cplusplus
+            </a>
+            . But honestly even with all of that documentation this project was
+            still relatively demanding.
+            <br />
+            <br />
+            Previously I mentioned how C++ and object-oriented programming
+            becomes easier. Not yet. Not until after this project. Once you
+            complete this project you could pat yourself on the back and truely
+            call yourself a C++ mini master. Yes I said mini, because C++ is
+            extraordinarily vast and ft_containers is not enough to cover it
+            all.
+            <br />
+            <br />
+            Let us begin by going through the hardships that I faced in
+            ft_containers. Templates is a broad topic in and of itself. I had to
+            peruse both of the documentations I mentioned to know how they did
+            their magic. When I began ft_containers I knew a few things here and
+            there about templates. I knew that they could be used to pass
+            arguments with different data types to a function at runtime thanks
+            to my previous project CPP modules. But did you know that templates
+            can also be used to detect whether a data type that you are passing
+            to a function is an integer or not. Honestly it seemed complicated
+            at first but once I got the hang of it, it became quite simple.
+          </Typography>
+          <ShowCaseComponent
+            title="ft_containers"
+            image={GithubImg}
+            handleOpen={null}
+            link={Ft_containersURL}
+          />
         </CardContent>
       </StyledCard>
       <Modal

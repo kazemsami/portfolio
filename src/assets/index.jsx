@@ -10,6 +10,7 @@ export { default as Cub3dImg } from "./Cub3d-img.png"
 export { default as GithubImg } from "./Github-img.jpeg"
 export { default as EvidenceImg } from "./Evidence-img.png"
 export { default as AnephityImg } from "./Anephity-img.png"
+export { default as MinishellImg } from "./Minishell-img.png"
 export const Cub3dURL = "https://github.com/kazemsami/cub3d";
 export const MinishellURL = "https://github.com/kazemsami/minishell"
 export const Ft_containersURL = "https://github.com/kazemsami/ft_containers"

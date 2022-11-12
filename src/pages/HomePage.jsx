@@ -22,6 +22,7 @@ import {
   EvidenceImg,
   Ft_containersURL,
   GithubImg,
+  MinishellImg,
   MinishellURL,
   PersonalWebImg,
   PersonalWebURL,
@@ -92,7 +93,7 @@ const HomePage = () => {
     {
       description:
         "In this school project we have to replicate bash in the C language using system functions from libraries to execute commands in a child process, parse input and handle errors.",
-      img: GithubImg,
+      img: MinishellImg,
       title: "42's Minishell",
       link: MinishellURL,
     },
