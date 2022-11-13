@@ -13,6 +13,7 @@ export { default as AnephityImg } from "./Anephity-img.png"
 export { default as MinishellImg } from "./Minishell-img.png"
 export { default as BinaryTreeImg } from "./BinaryTree-img.png"
 export { default as UnbalancedTreeImg } from "./UnbalancedTree-img.png"
+export { default as ProfileImg } from "./ProfilePic.jpeg"
 export const Cub3dURL = "https://github.com/kazemsami/cub3d";
 export const MinishellURL = "https://github.com/kazemsami/minishell"
 export const Ft_containersURL = "https://github.com/kazemsami/ft_containers"
