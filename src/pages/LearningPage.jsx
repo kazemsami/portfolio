@@ -1,5 +1,5 @@
 import {
-	Box,
+  Box,
   Card,
   CardContent,
   CardMedia,
@@ -349,7 +349,7 @@ const LearningPage = () => {
             binary tree in ascending and descending order. I sat and thought
             about it for a while. Let us say I had a binary tree such as this.
           </Typography>
-          <Card sx={{ boxShadow: 0, maxWidth: 500}}>
+          <Card sx={{ boxShadow: 0, maxWidth: 500 }}>
             <CardMedia
               sx={{ objectFit: "contain" }}
               component="img"
@@ -367,7 +367,7 @@ const LearningPage = () => {
             left as long as the left node exists. Now, what if I assume that the
             node with value 31 does not exist. That would mean just go to the
             right node and that is where I need to be.
-            <pre style={{maxWidth: 600}}>
+            <pre style={{ maxWidth: 600 }}>
               <code class="language-c">
                 {
                   "if (node->right != NULL) \n{\n\tnode = node->right;\n\twhile(node != NULL)\n\t\tnode = node->left;\n}"
@@ -380,7 +380,7 @@ const LearningPage = () => {
             does not. This is where I have to add a different statement and say
             else while the parent node exists and its value is less than the
             value I started with which is 31, traverse the parent nodes.
-            <pre style={{maxWidth: 600}}>
+            <pre style={{ maxWidth: 600 }}>
               <code class="language-c">
                 {
                   "if (node->right != NULL) \n{\n\tnode = node->right;\n\twhile(node->left != NULL)\n\t\tnode = node->left;\n}\nelse\n{\n\tNode tmp = node;\n\twhile(tmp != NULL && tmp.value < node.value)\n\t\ttmp = tmp->parent;\n\tnode = tmp;\n}"
@@ -392,7 +392,7 @@ const LearningPage = () => {
             to it and then traverse the right node while it exists. Else if left
             node does not exist, I traverse the parent nodes while the current
             node has a larger value than the start node.
-            <pre style={{maxWidth: 600}}>
+            <pre style={{ maxWidth: 600 }}>
               <code class="language-c">
                 {
                   "if (node->left != NULL) \n{\n\tnode = node->left;\n\twhile(node->right != NULL)\n\t\tnode = node->right;\n}\nelse\n{\n\tNode tmp = node;\n\twhile(tmp != NULL && tmp.value > node.value)\n\t\ttmp = tmp->parent;\n\tnode = tmp;\n}"
@@ -406,17 +406,17 @@ const LearningPage = () => {
             the binary tree has become more like a linked list with a time
             complexity of O(n).
           </Typography>
-		  <Box sx={{display: "flex"}}>
-			<Card sx={{ boxShadow: 0, maxWidth: 500 }}>
-				<CardMedia
-				sx={{ objectFit: "contain" }}
-				component="img"
-				height="400px"
-				image={UnbalancedTreeImg}
-				alt={"Unbalanced Tree"}
-				/>
-			</Card>
-		  </Box>
+          <Box sx={{ display: "flex" }}>
+            <Card sx={{ boxShadow: 0, maxWidth: 500 }}>
+              <CardMedia
+                sx={{ objectFit: "contain" }}
+                component="img"
+                height="400px"
+                image={UnbalancedTreeImg}
+                alt={"Unbalanced Tree"}
+              />
+            </Card>
+          </Box>
           <Typography variant="body1">
             A quick google search got me to self-balancing binary trees such as
             an AVL tree or Red-black tree. My body heated up at the thought of
@@ -436,13 +436,13 @@ const LearningPage = () => {
           <Divider sx={{ m: 2, background: "gray" }} />
           <Typography variant="body1">
             Some roads in this journey were indeed rougher than others but what
-            really matters is the things you learn from it. An interesting thing
-            I learnt is that when you need to do something for the first time,
-            carry out proper research or else you might end up having to repeat
-            everything or end up with a website that is poorly designed. God
-            willing, I will not be repeating the same mistakes. Thank you for
-            diving deep with me in my learning journey. I hope you found some
-            things inspiring and learnt from my experience.
+            really matters is the things that you learn from it. An interesting
+            thing I learnt is that when you need to do something for the first
+            time, carry out proper research or else you might end up having to
+            repeat everything or end up with a website that is poorly designed.
+            God willing, I will not be repeating the same mistakes. Thank you
+            for diving deep with me in my learning journey. I hope you found
+            some things inspiring and learnt from my experience.
           </Typography>
         </CardContent>
       </StyledCard>
