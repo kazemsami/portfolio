@@ -1,10 +1,7 @@
 import {
-  Button,
-  Card,
-  CardActions,
   CardContent,
   CardMedia,
-  Grid,
+  Divider,
   Modal,
   Typography,
 } from "@mui/material";
@@ -27,8 +24,9 @@ import {
   PersonalWebImg,
   PersonalWebURL,
 } from "../assets";
-import { StyledBox, StyledButton, StyledCardModal } from "./styled";
+import { StyledBox, StyledButton, StyledCard, StyledCardModal } from "./styled";
 import { IoCloseCircleOutline } from "react-icons/io5";
+import ProjectsComponent from "../components/ProjectsComponent";
 
 const HomePage = () => {
   const [open, setOpen] = useState(false);
@@ -38,7 +36,7 @@ const HomePage = () => {
     setOpen(true);
   };
   const handleClose = () => setOpen(false);
-  const cards = [
+  const personalProjects = [
     {
       description:
         "Internet Cafe Windows application that I developed using C/C++ Windows API interface.",
@@ -68,6 +66,8 @@ const HomePage = () => {
       title: "Anephity web app",
       link: AnephityURL,
     },
+  ];
+  const schoolProjects = [
     {
       description:
         "ft_containers is a school project where you have to build the STL containers in C++ such as map, vector and stack from scratch.",
@@ -100,73 +100,24 @@ const HomePage = () => {
   ];
   return (
     <StyledBox component="main">
-      <Grid
-        container
-        spacing={{ xs: 3, md: 4, lg: 5 }}
-        columns={{ xs: 4, sm: 8, md: 12, lg: 16 }}
-        alignItems="stretch"
-      >
-        {cards.map((item) => (
-          <Grid
-            key={item.title}
-            item
-            xs={4}
-            sm={4}
-            md={4}
-            lg={4}
-            sx={{ display: "flex" }}
-          >
-            <Card
-              sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                flexDirection: "column",
-                p: 1,
-              }}
-            >
-              <CardMedia
-                component="img"
-                height="140"
-                image={item.img}
-                alt={item.title}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {item.title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {item.description}
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button
-                  href={
-                    item.title !== "Internet Cafe System" ? item.link : null
-                  }
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={
-                    item.title === "Internet Cafe System"
-                      ? () => handleOpen(item.link)
-                      : null
-                  }
-                  size="small"
-                >
-                  {item.title === "Internet Cafe System" ? "Watch" : "View"}
-                </Button>
-                {item.evidence && (
-                  <Button
-                    onClick={() => handleOpen(item.evidence)}
-                    size="small"
-                  >
-                    Evidence
-                  </Button>
-                )}
-              </CardActions>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
+      <StyledCard>
+        <CardContent>
+          <Typography sx={{ textAlign: "center" }} variant="h3">
+            Personal Projects
+          </Typography>
+          <Divider sx={{ m: 2, background: "gray" }} />
+          <ProjectsComponent projects={personalProjects} handleOpen={handleOpen}/>
+        </CardContent>
+      </StyledCard>
+      <StyledCard sx={{ marginTop: 5 }}>
+        <CardContent>
+          <Typography sx={{ textAlign: "center" }} variant="h3">
+            School Projects
+          </Typography>
+          <Divider sx={{ m: 2, background: "gray" }} />
+          <ProjectsComponent projects={schoolProjects} handleOpen={null}/>
+        </CardContent>
+      </StyledCard>
       <Modal
         open={open}
         onClose={handleClose}

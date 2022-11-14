@@ -66,20 +66,24 @@ const HeaderComponent = () => {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { md: "none" } }}
           >
             <MenuIcon />
           </IconButton>
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", sm: "none", md: "block" },
+            }}
           >
             Kazem's Portfolio
           </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Box sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
             {navItems.map((item) => (
-              <Link key={item}
+              <Link
+                key={item}
                 style={{ textDecoration: "none", color: "white" }}
                 to={
                   item === "About me"
@@ -93,9 +97,7 @@ const HeaderComponent = () => {
                     : "/"
                 }
               >
-                <Button sx={{ color: "#fff" }}>
-                  {item}
-                </Button>
+                <Button sx={{ color: "#fff" }}>{item}</Button>
               </Link>
             ))}
           </Box>
@@ -110,7 +112,7 @@ const HeaderComponent = () => {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
+            display: { xs: "block", sm: "block", md: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,

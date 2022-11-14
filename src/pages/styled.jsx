@@ -3,18 +3,22 @@ import styled from "styled-components";
 
 export const StyledBox = styled(Box)`
   padding: 95px 50px 25px 50px;
-  @media (max-width: 599px)
-  {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 599px) {
     padding: 82px 30px 25px 30px;
   }
-  @media (max-width: 468px)
-  {
+  @media (max-width: 468px) {
     padding: 82px 10px 25px 10px;
   }
-`
+`;
 
 export const StyledCard = styled(Card)`
-  padding: 100px;
+  max-width: 1700px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 60px;
   @media (max-width: 768px) {
     padding: 30px;
   }

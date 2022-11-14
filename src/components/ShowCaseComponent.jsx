@@ -16,6 +16,7 @@ const ShowCaseComponent = ({ title, link, image, evidence, handleOpen }) => {
         justifyContent: "space-between",
         flexDirection: "column",
         p: 1,
+		maxWidth: 500,
         background: "#284646",
       }}
     >

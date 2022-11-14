@@ -14,7 +14,7 @@ import {
   LocationImg,
   PhoneImg,
 } from "../assets";
-import { StyledBox } from "./styled";
+import { StyledBox, StyledCard } from "./styled";
 
 const ContactPage = () => {
   const cards = [
@@ -28,13 +28,9 @@ const ContactPage = () => {
     },
   ];
   return (
-    <StyledBox
-      component="main"
-    >
-      <Card sx={{ p: 1 }}>
-        <CardContent
-          sx={{ gap: "10px", display: "flex", flexDirection: "column" }}
-        >
+    <StyledBox component="main">
+      <StyledCard>
+        <CardContent>
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <img width={30} src={LocationImg} alt="My location" />
             <Typography component="span" variant="h6">
@@ -76,15 +72,13 @@ const ContactPage = () => {
             columns={{ xs: 4, sm: 8, md: 12, lg: 16 }}
           >
             {cards.map((item) => (
-              <Grid key={item} item xs={4} sm={4} md={4} lg={4}>
+              <Grid key={item} item xs={4} sm={4} md={4} lg={3}>
                 <a href={item.link} target="_blank" rel="noreferrer">
-                  <Card sx={{ p: 2, background: "#284646" }}>
+                  <Card sx={{ p: 2, maxWidth: 200, background: "#284646" }}>
                     <CardMedia
                       component="img"
-                      height="140"
                       image={item.img}
                       alt={item.link}
-                      sx={{objectFit: "contain"}}
                     />
                   </Card>
                 </a>
@@ -92,7 +86,7 @@ const ContactPage = () => {
             ))}
           </Grid>
         </CardContent>
-      </Card>
+      </StyledCard>
     </StyledBox>
   );
 };
