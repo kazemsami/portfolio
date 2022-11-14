@@ -12,7 +12,9 @@ const GoalsComponent = ({ actionSteps, goal, index }) => {
         sx={{ gap: "10px", display: "flex", flexDirection: "column" }}
       >
         <Typography variant="h5">Goal {index}</Typography>
-        <Typography variant="body1">{goal}</Typography>
+		{goal.split('\n').map((goalItem) => 
+			 <Typography key={goalItem} variant="body1">{goalItem}</Typography>
+		)}
         {actionSteps.map((item) => (
           <Card key={item.step}>
             <CardContent

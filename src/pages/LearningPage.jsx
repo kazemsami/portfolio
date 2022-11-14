@@ -54,12 +54,12 @@ const LearningPage = () => {
           <Divider sx={{ m: 2, background: "gray" }} />
           <Typography variant="body1">
             I will briefly tell you how my programming career began. I used to
-            play so many computer games until I realised that I should be doing
-            something useful with my life. As a gamer, I decided that I should
-            do something that is associated with computers. That is when I
-            discovered programming. I was 21. I began my learning journey by
-            watching YouTube tutorials and solving simple coding challenges and
-            built my way up from there.
+            play a lot of computer games until I realised that I should be doing
+            something useful with my life. As a PC gamer, I decided that I
+            should pursue a career which is associated with personal computers.
+            That is when I discovered programming. I was 21. I began my learning
+            journey by watching YouTube tutorials and solving simple coding
+            challenges and built my way up from there.
           </Typography>
           <Divider sx={{ m: 2, background: "gray" }} />
           <Typography variant="h5">
@@ -137,7 +137,7 @@ const LearningPage = () => {
           <Typography variant="h4">42 Abu Dhabi</Typography>
           <Divider sx={{ m: 2, background: "gray" }} />
           <Typography variant="body1">
-            42 Abu Dhabi is a coding school that encourages peer-to-peer
+            42 Abu Dhabi is a coding school which encourages peer-to-peer
             learning. Until now, I completed 12 projects in the school's
             curriculum which was exigent and long but I will just be writing
             about 4 projects that I think are worth mentioning or else this will
@@ -171,16 +171,16 @@ const LearningPage = () => {
             I asked a few students and one of them said that I might not be
             waiting for the child process to finish. I gave it a try but to no
             avail until someone else told me that I should close the pipes after
-            using them. I tried that and voila it worked!
+            using them. I tried the final suggestion and voila it worked!
             <br />
             <br />
             Another issue we both faced was related to built-in commands. She
             was testing the exit command she wrote and asked me to take a look.
-            We both noticed that exit command does not work when passing a
+            We both noticed that the exit command does not work when passing a
             maximum unsigned long as an argument to it. We solved it by using a
             quick hacky way where in our custom atoi function we ensure that the
-            size of the string that we want to convert to an integer is not more
-            than 19. It was great working with a brilliant student like
+            size of the string which we want to convert to an integer is not
+            more than 19. It was great working with a brilliant student like
             Anastasia, I learnt so much from her and would love to work with her
             again in the future.
           </Typography>
@@ -305,7 +305,7 @@ const LearningPage = () => {
             extraordinarily vast and ft_containers is not enough to cover it
             all.
             <br />
-            <br />I will begin by writing about the hardships that I faced in
+            <br />I will begin by writing about the hardships which I faced in
             ft_containers. First, let me tell you about templates. Templates are
             a broad topic in and of itself. I had to peruse both of the
             documentations I mentioned to know how they did their magic. When I
@@ -313,7 +313,7 @@ const LearningPage = () => {
             templates. I knew that they could be used to pass arguments with
             different data types to a function at runtime thanks to my previous
             project CPP modules. But did you know that templates can also be
-            used to detect whether a data type that you are passing to a
+            used to detect whether a data type which you are passing to a
             function is of an integer data type or not. Honestly, it seemed
             complicated at first but once I got the hang of it, it became quite
             simple.
@@ -323,7 +323,7 @@ const LearningPage = () => {
             you might be asking? Because they are an essential part of the C++
             map implementation. A map comprises one or multiple (key, value)
             pairs. So, to locate a specific key in a map you need an efficient
-            algorithm. That is where binary trees come into play. This will be
+            algorithm, which is where binary trees come into play. This will be
             easy, all I need to do is code a binary tree and I am done, right?
             It was not that simple as you will come to know shortly. I
             implemented a binary tree with the help of{" "}
@@ -362,12 +362,11 @@ const LearningPage = () => {
             proceed to the next node which in this case is 31. I could say if
             the right node exists go right. Then could I just say if the left
             node exists go left? I do not think so because if the right node
-            might have been 33 and then the left node 32 in that case I would
-            have to go left twice to get to 31. Easy. Once you go right, just
-            keep going left as long as the left node exists. Now, what if I
-            assume that the node with value 31 does not exist. That would mean
-            just go right and the node that I am currently at is where I need to
-            be.
+            might have been 33 and then the left node 32, then I would have to
+            go left twice to get to 31. Easy. Once you go right, just keep going
+            left as long as the left node exists. Now, what if I assume that the
+            node with value 31 does not exist. That would mean just go to the
+            right node and that is where I need to be.
             <pre>
               <code class="language-c">
                 {
@@ -385,6 +384,18 @@ const LearningPage = () => {
               <code class="language-c">
                 {
                   "if (node->right != NULL) \n{\n\tnode = node->right;\n\twhile(node->left != NULL)\n\t\tnode = node->left;\n}\nelse\n{\n\tNode tmp = node;\n\twhile(tmp != NULL && tmp.value < node.value)\n\t\ttmp = tmp->parent;\n\tnode = tmp;\n}"
+                }
+              </code>
+            </pre>
+            Now, to iterate through the binary tree in descending order it is
+            exactly the opposite procedure. I check if the left node exists, go
+            to it and then traverse the right node while it exists. Else if left
+            node does not exist, I traverse the parent nodes while the current
+            node has a larger value than the start node.
+            <pre>
+              <code class="language-c">
+                {
+                  "if (node->left != NULL) \n{\n\tnode = node->left;\n\twhile(node->right != NULL)\n\t\tnode = node->right;\n}\nelse\n{\n\tNode tmp = node;\n\twhile(tmp != NULL && tmp.value > node.value)\n\t\ttmp = tmp->parent;\n\tnode = tmp;\n}"
                 }
               </code>
             </pre>
@@ -424,9 +435,9 @@ const LearningPage = () => {
           <Typography variant="body1">
             Some roads in this journey were indeed rougher than others but what
             really matters is the things you learn from it. An interesting thing
-            that I learnt is when you need to do something for the first time,
+            I learnt is that when you need to do something for the first time,
             carry out proper research or else you might end up having to repeat
-            everything or end up with a website that is designed poorly. God
+            everything or end up with a website that is poorly designed. God
             willing, I will not be repeating the same mistakes. Thank you for
             diving deep with me in my learning journey. I hope you found some
             things inspiring and learnt from my experience.
